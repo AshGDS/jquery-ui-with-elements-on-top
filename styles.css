@@ -1,0 +1,82 @@
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.breather {
+	padding: 20px;
+}
+
+input[name=star-positioner] {
+	width: 200px;
+	font-size: 24px;
+	border: 2px solid black;
+}
+
+.relative {
+	position: relative;
+	width: 50%;
+}
+
+.star {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: -6.25px; /* quarter of the height */
+	background: url('./star-black.svg');
+	z-index: 998;
+	margin-left: -12.5px; /* Make the middle of the star the "start" position*/
+}
+
+/*.star:after {
+    content: 'Event';
+    position: absolute;
+    background-color: #26262a;
+    width: 100px;
+    height: 25px;
+    bottom: -35px;
+    left: -35px;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.5em;
+    vertical-align: center;
+    padding-top: 6px;
+    align-content: center;
+}*/
+
+.star:hover {
+	background: url('./star-grey.svg');
+}
+
+.ui-slider-handle {
+	z-index: 999 !important;
+	position: relative;
+}
+
+.ui-slider-handle:before {
+    content: attr(data-year);
+    position: absolute;
+    background-color: #26262a;
+    width: 50px;
+    height: 25px;
+    top: -35px;
+    left: -15px;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.5em;
+}
+
+.ui-slider-handle:after {
+	content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #26262a;
+    top: -10px;
+    left: 2px;
+}
+
+.ui-widget-header {
+	background: orange;
+}
