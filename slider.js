@@ -51,22 +51,11 @@ $(function() {
 
         var year_relative_to_sum_of_years = year_to_place_star - min_year_value;
 
-
-
-        /* Calculate the percentage of width the star takes up relative to the div (e.g. 4%) then divide by 2 to get middle of the star (2%).
-        We need this so that the middle pixel of the star appears where 1950 is, and not the first pixel (left) of the star.	*/
-        var star_width_offset = (($star.width() / $relative_div.width()) * 100) / 2;
-        var star_width_offset = 0;
-
-
-
         // Set the star's position as a percentage. 
-        var star_position = ((year_relative_to_sum_of_years / years) * 100) - star_width_offset;
-
+        var star_position = ((year_relative_to_sum_of_years / years) * 100);
 
         $star.css('left', `${star_position}%`)
-
-    
+        
     }
 
     place_star(1950);
