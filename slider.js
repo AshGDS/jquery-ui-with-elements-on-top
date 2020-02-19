@@ -43,11 +43,6 @@ $(function() {
         // Amount of years that exist in the slider (1126);
         var years = max_year_value - min_year_value;
 
-
-        // Divide the years by 100 so that we can get the % of width taken up by 1 year
-        var year_ratio = years / 100;
-
-
         /* Minus the min year (974) from the year we want (1950) to get the years "index" from 0 to 1126. 
 
         E.g. 2100 would be 1126 as it's the highest number.
